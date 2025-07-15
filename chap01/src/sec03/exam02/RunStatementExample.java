@@ -7,6 +7,7 @@ public class RunStatementExample {
 		int y = 2;	//변수 y선언 후 2저장
 		int result = x + y;	//변수 result 선언 후 x+y저장
 		System.out.println(result);	//println 메소드 호출 => 콘솔에 출력
+		//git 연습
 	}
 
 }
