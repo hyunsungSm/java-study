@@ -1,5 +1,7 @@
 package homework;
 
+import java.util.Scanner;
+
 public class Homework2 {
 
 	public static void main(String[] args) {
@@ -14,6 +16,7 @@ public class Homework2 {
 		System.out.println("세로: " + b);
 		System.out.println("면적: " + c);
 		System.out.println("둘레: " + d);
+		
 	}
 
 }
