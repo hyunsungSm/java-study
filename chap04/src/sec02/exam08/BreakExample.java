@@ -24,13 +24,17 @@ public class BreakExample {
 //		45까지의 합: 1035
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("숫자를 입력하세요: ");
+		System.out.print("숫자를 입력하세요: ");
 		int a = sc.nextInt();
 		int sum = 0;
 		
 		for (int i = 1; i <= a; i++) {
 			sum += i;
+			if (sum >= 1000) {
+				break;
+			}
 		}
+		System.out.println(a + "까지의 합: " + sum);
 		
 		
 	}	
