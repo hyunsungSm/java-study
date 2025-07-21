@@ -14,7 +14,10 @@ public class homework1 {
 				System.out.println("1~50사이의 정수를 입력하세요.");
 				return;
 		}
-		for (int i = 0; i <= integer; i += 2) {
+		for (int i = 0; i <= integer; i++) {
+			if(i % 2 == 1) {
+				continue;
+			}
 			sum += i;
 	}
 		System.out.println("합계: " + sum);

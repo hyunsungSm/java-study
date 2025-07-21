@@ -17,11 +17,11 @@ public class homework2 {
 			System.out.println("양수만 입력해주세요.");
 			return;
 		}
-		for (int i = 1; i <= num; i++) {
+		for (int i = 2; i <= num; i++) {
 			System.out.println("=== " + i + "단 ===");
 			for (int j = 1; j < 10; j++) {
-				result = num * j;
-				System.out.println(num + " * " + j + " = " + result);
+				result = i * j;
+				System.out.println(i + " * " + j + " = " + result);
 			}
 			System.out.println();
 		}
