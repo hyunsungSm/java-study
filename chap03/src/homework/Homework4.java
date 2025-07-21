@@ -8,16 +8,22 @@ public class Homework4 {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("국어: ");
 		int korean = sc.nextInt();
+		
 		System.out.print("수학: ");
 		int math = sc.nextInt();
+		
 		System.out.print("영어: ");
 		int english = sc.nextInt();
 		
 		int a = korean + math + english;
-		int b = a / 3;
+		double b = a / 3.0;
+		
 		System.out.println("합계: " + a);
 		System.out.println("평균: " + b);
-		String result1 = (b < 90) ? "휴대폰을 바꿀 수 없습니다." : "휴대폰을 바꿀 수 있습니다.";
+		String result1 = (korean >= 60 && math >= 60 && english >= 60 && b > 90) 
+						 ? "휴대폰을 바꿀 수 있습니다." 
+						 : "휴대폰을 바꿀 수 없습니다.";
+		
 		System.out.println(result1);
 	}
 
