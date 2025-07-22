@@ -17,6 +17,11 @@ public class Homework2 {
 			integer2 = sc.nextInt();
 			array[i] = integer2;
 		}
+		for (int j = 0; j < integer; j++) {
+			System.out.print(array[j] + " ");
+		}
+		
+		System.out.println();
 		
 		if (integer2 > 0) {
 			sum += integer2;

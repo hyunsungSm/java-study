@@ -10,11 +10,11 @@ public class Homework1 {
 		int height = 0;
 		int temp = 0;
 		for (int i = 0; i < student.length; i++) {
-			for (int j = i+1; j < student.length; j++) {
+			for (int j = i; j < student.length; j++) {
 				if (student[i] > student[j]) {
-					temp = student[i];
-					student[i] = student[j];
-					student[j] = temp;
+					temp = student[j];
+					student[j] = student[i];
+					student[i] = temp;
 				}
 				height= student[i];
 			}
