@@ -13,6 +13,9 @@ public class homework5 {
 			System.out.print("숫자(0을 입력하면 종료): ");
 			num1 = sc.nextInt();
 			
+			if (num1 < 0) {
+				continue;
+			}
 			if (num1 == 0) {
 				break;
 			}

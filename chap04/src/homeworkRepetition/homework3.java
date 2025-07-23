@@ -11,10 +11,12 @@ public class homework3 {
 		
 		for (;;) {
 			if(input.equals("탈출")) {
-				System.out.println("프로그램 종료");
-			} else if(input.equals(input)) {
-				System.out.println(input);
-			}
+				break;
+			} 
+			System.out.println("프로그램 종료");
+			
+			System.out.println(input);
+			
 		}
 	}
 
