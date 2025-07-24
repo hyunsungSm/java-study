@@ -1,4 +1,4 @@
-package homework;
+package homeworkMethod;
 
 import java.util.Scanner;
 
@@ -25,17 +25,16 @@ public class Homework2Example {
 		
 		int result3 = homework2.integer(num3);	
 		
-		System.out.print("문자열을 입력하세요: ");
-		String str1 = sc.nextLine();
-		System.out.println("문자를 입력하세요: ");
-		char ch = sc.nextLine().charAt(0);
-		
-		String result4 = homework2.check(str1, ch);
-		
 		System.out.print("정수를 입력해주세요: ");
 		int num4 = sc.nextInt();
 		
-		int result5 = homework2.goo(num4);
+		int result4 = homework2.goo(num4);
+		
+		int result5 = homework2.check("abcd", "a");
+	
+			
+	
+		
 		
 		
 		

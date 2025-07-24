@@ -1,10 +1,10 @@
-package homework;
+package homeworkMethod;
 
 public class Homework2 {
 	String message;
 	int sum;
 	int count;
-	
+
 	String message(String str1) {
 		return str1;
 	}
@@ -25,17 +25,17 @@ public class Homework2 {
 		return x;
 	}
 	
-	String check(String x, char y) {
-		char ch = x.charAt(0);
-		for (int i = 0; i < x.length(); i++) {
-			if (x.charAt(i) == ch) {
+	int check(String x, String y) {
+		String str = x;
+		char ch = y.charAt(0);
+		for (int i = 0; i < str.length(); i++) {
+			if (str.charAt(i) == ch) {
 				count++;
+				System.out.println("개수: " + count);
 			}
-			System.out.println("개수: " + count);
 		}
-		return x;
+		return count;
 	}
-	
 	
 	
 	int goo(int x) {
