@@ -7,6 +7,10 @@ public class StudentExample {
 		Student s2 = new Student();
 		Student s3 = new Student();
 		
+		s1.studentNo();
+		s2.studentNo();
+		s3.studentNo();
+		
 		s1.setStudentName("김철수");
 		s2.setStudentName("홍길동");
 		s3.setStudentName("이영희");
