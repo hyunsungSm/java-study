@@ -1,0 +1,24 @@
+package homework.question2;
+
+public class Drink extends Menu {
+	private String recipe;
+	
+	public Drink(String name, int price, String recipe) {
+		super(name, price);
+		this.recipe = recipe;
+	}
+
+	public String getRecipe() {
+		return recipe;
+	}
+
+	public void setRecipe(String recipe) {
+		this.recipe = recipe;
+	}
+	
+	@Override
+	public String cook() {
+		return super.toString() + "레시피는 " + recipe + "입니다."; 
+	}
+
+}
