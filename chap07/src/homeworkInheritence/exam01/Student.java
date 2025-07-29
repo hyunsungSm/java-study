@@ -1,21 +1,20 @@
 package homeworkInheritence.exam01;
 
-public class Student extends Person{
+public class Student extends Person {
 	private int grade;
 	private String major;
+
+	public void Person(){
+	}
 	
-	
-	public Student(String name, int age, double height, double weight, int grade, String major) {
-		super(age, height, weight);
+	public void Person(String name, int age, double height, double weight, int grade, String major){
 		this.grade = grade;
 		this.major = major;
 	}
 	
 	@Override
-	public void getInfo() {
-		super.getInfo();
-		System.out.println("학년: " + grade);
-		System.out.println("전공: " + major);
+	public String toString() {
+		return super.toString() + "학년: " + grade + "\n" +
+								  "전공: " + major + "\n";
 	}
-	
 }
