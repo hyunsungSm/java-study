@@ -17,8 +17,7 @@ public class Drink extends Menu {
 	}
 	
 	@Override
-	public String cook() {
-		return super.toString() + "레시피는 " + recipe + "입니다."; 
+	public void cook() {
 	}
 
 }

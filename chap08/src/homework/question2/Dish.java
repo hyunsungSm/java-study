@@ -3,6 +3,9 @@ package homework.question2;
 public class Dish extends Menu {
 	private String ingredients;
 	
+	public Dish() {
+	}
+	
 	public Dish(String name, int price, String ingredients) {
 		super(name, price);
 		this.ingredients = ingredients;
@@ -17,7 +20,8 @@ public class Dish extends Menu {
 	}
 	
 	@Override
-	public String cook() {
-		return super.toString() + "재료는 " + ingredients + "입니다."; 
+	public void cook() {
+		Menu menu = new Dish();
+		menu.toString();
 	}
 }
