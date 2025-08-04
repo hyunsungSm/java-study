@@ -1,6 +1,6 @@
 package homework.question1;
 
-public class Book {
+public class Book implements Comparable<Book> {
 	private String title;
 	private String author;
 	private String category;
@@ -20,6 +20,8 @@ public class Book {
 	public String toString() {
 		return "Book [title=" + title + ", author=" + author + ", category=" + category + ", price=" + price + "]";
 	}
+	
+	
 
 	public String getTitle() {
 		return title;
@@ -52,7 +54,9 @@ public class Book {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	
-	
 
+	@Override
+	public int compareTo(Book other) {
+		return this.title.compareTo(other.title);
+	}
 }
