@@ -1,6 +1,7 @@
 package homework.question2;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -27,20 +28,40 @@ public class LotteryController {
 		return lottery;
 	}
 	
-//	public Set<Lottery> winObject(){
-//		if (lottery.size() < 4) {
-//			return null;
-//		}
-		// 2. 랜덤으로 뽑기 위해 lottery를 ArrayList에 담고
-//		List<Lottery> lotteryList = new ArrayList<Lottery>(lottery);
-		// 인덱스를 이용해 win에 당첨자 저장
-		// 이때, 당첨자 수는 무조건 4명 이를 위한 추첨자 수는 4명 이상
-		// 만일 당첨자 목록에 삭제된 추첨 대상자가 있다면
-		// 기존에 당첨된 사람은 제외
-		// 삭제된 사람의 자리만 새로운 추첨자로 채우기
-//	}
+	public Set<Lottery> winObject(){
+		if (lottery.size() < 4) {
+			return null;
+		}
+		
+		List<Lottery> lotteryList = new ArrayList<Lottery>(lottery);
+		
+		lotteryList.removeAll(win);
+		
+		int index = 4 - lottery.size();
+		
+		if (index > 0 && lotteryList.size() >= index) {
+			Collections.shuffle(lotteryList);
+			for (int i = 0; i < index; i++) {
+				win.add(lotteryList.get(i));
+			}
+		}
+		return win;
+	}
 	
+	public Set<Lottery> sortedWinObject(){
+		// 1. 이름을 오름차순으로 정렬
+		// 이름이 같으면 번호로 오름차순 정렬
+		// 정렬의 결과를 반환
+		// 이때, 미리 만들어진 win을 가지고 정렬
+		List<Lottery> winList = new ArrayList<Lottery>(win);
+		Collections.sort(winList);
+		return win;
+	}
 	
-	
+	public boolean searchWinner(Lottery l) {
+		// 1. win에 해당 객체가 있는지 확인
+		// 2. 결과 boolean을 리턴
+		return win.contains(l);
+	}
 
 }

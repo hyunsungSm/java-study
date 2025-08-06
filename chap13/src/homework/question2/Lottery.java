@@ -49,6 +49,9 @@ public class Lottery implements Comparable<Lottery>{
 
 	@Override
 	public int compareTo(Lottery l) {
+		if (name.equals(l.name)) {
+			return phone.compareTo(l.phone);
+		}
 		return 0;
 	}		
 }
