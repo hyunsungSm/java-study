@@ -71,14 +71,28 @@ public class MemberMenu {
 	}
 	
 	public void logIn() {
+		Member member = new Member();
 		// 1. 아이디와 비밀번호를 사용자로부터 입력 받음
+		System.out.print("아이디: ");
+		String id = sc.nextLine();
+		System.out.print("비밀번호: ");
+		String password = sc.nextLine();
 		// 2. mc의 logIn() 메소드로 넘겨줌
+		String result = mc.logIn(id, password);
 		// 3. 반환 값이 있으면 "OOO님, 환영합니다!" 출력
 		// -> 그 다음 로그인 화면(memberMenu() 메소드 호출)으로 이동
 		// -> memberMenu 호출은 mainMenu() 메소드에서 수행
 		// 4. 반환 값이 없으면 
 		// -> "틀린 아이디 또는 비밀번호입니다. 다시 입력해주세요."출력
 		// -> 올바른 아이디와 비밀번호를 입력할때까지 반복
+		while (true) {			
+			if (result.equals(member.getName())) {
+				System.out.println(member.getName() + "님, 환영합니다!!");
+				return;
+			} else {
+				System.out.println("틀린 아이디 또는 비밀번호입니다. 다시 입력해주세요.");
+			}
+		}
 	}
 	public void changePassword() {
 		// 1. 아이디와 기존 비밀번호, 변경할 비밀번호 입력 받음
